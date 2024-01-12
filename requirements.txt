@@ -1,0 +1,5 @@
+Flask
+Flask-Caching
+Jinja2
+Werkzeug
+requests

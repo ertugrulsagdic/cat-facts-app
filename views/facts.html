@@ -1,0 +1,14 @@
+{% for fact in facts %}
+<tr>
+   
+    <td class="factsText">
+        <a hx-get="/facts/{{fact.id}}" hx-target="body" hx-swap="beforeend">
+            <div>
+        <img src="/static/img/cat.png" alt="cat icon" class="catIcon" width="30" height="30">
+        <p> {{ fact.text }}</p>
+    </div>
+    <small><b>Click to see more details >></p>
+    </b></small>
+    </td>
+</tr>
+{% endfor %}

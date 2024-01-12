@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+
+<link rel="stylesheet" href="/static/css/facts.css">
+<div>
+<table> 
+    {% if facts|length > 0 %}
+        <tbody>
+            {% include 'facts.html' %}
+        </tbody>
+    {% else %}
+        {% if error %}
+            {% include 'warnings/sgr.html' %}
+        {% else %}
+            {% include 'warnings/no_data.html' %}
+        {% endif %}
+    {% endif %}
+</table>
+</div>
+
+{% endblock %}

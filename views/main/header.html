@@ -1,0 +1,35 @@
+<header>
+    <div class="header">
+        <a href="/" class="home">Cat Facts</a>
+        
+        <div class="header-right" id="headerButton">
+          <a onclick="toggleHeaderItems()">
+            <img src="/static/img/menu.png" alt="Menu" height="35px" width="35px">
+          </a>
+        </div>
+        <div class="header-right" id="headerElements">
+          <a class="{{ 'active' if active_page == 'index' else '' }}" href="/">Home</a>
+          <a class="{{ 'active' if active_page == 'facts' else '' }}" href="/facts">Facts</a>
+          <a class="{{ 'active' if active_page == 'random' else '' }}" href="/random">Random</a>
+        </div>
+      </div>
+</header>
+
+<script>
+  function toggleHeaderItems() {
+    var x = document.getElementById("headerElements");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+      x.style.float = "none"
+      x.style.paddingTop = "80px"
+    }
+    let btns = x.getElementsByTagName('a');
+    for (let i = 0; i < btns.length; i++) {
+      btns[i].style.textAlign = "left";
+      btns[i].style.float = "none";
+      btns[i].style.display = "block";
+    }
+  }
+  </script>

@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+
+<div class="allContent">
+    <img class="catFactsLogo" src="../static/img/cat_facts.png" />
+    <h1> Cat Facts</h1>
+    <p>
+        Be ready to learn some interesting facts about cats!
+    </p>
+    <a id="factsButton" hx-get="/facts" hx-target="body" hx-push-url="true">Go to Facts</button>
+</div>
+
+<!-- <img id="spinner" class="htmx-indicator" src="/static/img/spinning-circles.svg" alt="Request In Flight..." /> -->
+
+
+{% endblock %}

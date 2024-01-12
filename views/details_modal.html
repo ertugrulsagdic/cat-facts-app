@@ -1,0 +1,39 @@
+<div id="modal" _="on closeModal add .closing then wait for animationend then remove me">
+	<div class="modal-underlay" _="on click trigger closeModal"></div>
+	<div class="modal-content">
+		<h1>Fact Details</h1>
+		{% if fact %}
+
+			<div class="userProfile">
+				<img src="{{fact.user.photo}}" alt="user image" width="40" height="40">
+				{{fact.user.first}} {{fact.user.last}}
+			</div>
+
+			<br>
+			<div class="factText">
+				{{fact.text}}
+			</div>
+			<br>
+			<div class="isVerified">
+				
+				{% if fact.status.verified %}
+					<img src="/static/img/check.png" alt="verified icon" width="20" height="20">
+					<p>Verified</p>
+				{% else %}
+					<img src="/static/img/cancel.png" alt="not verified icon" width="20" height="20">
+					<p>Not Verified</p>
+				{% endif %}
+			</div>
+			<p>Source: {{fact.source}}</p>
+		
+		{% else %}
+			{% include 'warnings/no_data.html' %}
+
+		{% endif %}
+
+		
+
+		<br>
+		<a _="on click trigger closeModal">Close</a>
+	</div>
+</div>

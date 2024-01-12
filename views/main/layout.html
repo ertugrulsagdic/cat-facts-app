@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="">
+<head>
+    <title>Cat Facts</title>
+    <script src="/static/js/htmx.js"></script>
+    <link rel="stylesheet" href="/static/css/layout.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/modal.css">
+    <script src="https://unpkg.com/hyperscript.org"></script>
+</head>
+<body hx-boost="true">
+<main>
+    {% include "main/header.html" %}
+    <div id="page-container">
+      <div id="content-wrap">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+</main>
+</body>
+</html>

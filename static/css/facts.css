@@ -1,0 +1,33 @@
+
+.factsText {    
+    padding: 30px 5px;
+    line-height: 1.5;
+    font-size: 20px;
+    border: 2px solid black;
+    background-color: #edeaf8;
+    font-family:'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    /* border-collapse: inherit; */
+}
+.factsText a div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.factsText a  {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.factsText small {
+    padding-right: 20px;
+}
+.factsText img {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.factsText p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
