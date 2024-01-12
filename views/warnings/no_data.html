@@ -1,4 +1,4 @@
 <div class="allContent">
     <img src="../static/img/no_data.jpg" alt="No facts yet" width="400" height="300">
-    <p>There are no facts yet.</p>
+    <p>{% if message %} {{message}} {% else %} There are no facts yet. {% endif %}</p>
 </div>
